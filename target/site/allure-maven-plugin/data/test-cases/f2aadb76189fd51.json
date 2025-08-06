@@ -1,0 +1,252 @@
+{
+  "uid" : "f2aadb76189fd51",
+  "name" : "testNavigateFromProfileToConstructor",
+  "fullName" : "tests.ProfileTest.testNavigateFromProfileToConstructor",
+  "historyId" : "8880a04b6e58050ff4f0bee9f4715d2b",
+  "time" : {
+    "start" : 1754492001741,
+    "stop" : 1754492011259,
+    "duration" : 9518
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Регистрируем пользователя с email: testuser_1754492001750@mail.ru",
+      "time" : {
+        "start" : 1754492001767,
+        "stop" : 1754492005004,
+        "duration" : 3237
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "testuser_1754492001750@mail.ru"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем главную страницу и логинимся под пользователем: {email}",
+      "time" : {
+        "start" : 1754492005138,
+        "stop" : 1754492010490,
+        "duration" : 5352
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Логинимся как пользователь: testuser_1754492001750@mail.ru",
+        "time" : {
+          "start" : 1754492009799,
+          "stop" : 1754492010232,
+          "duration" : 433
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Вводим email: testuser_1754492001750@mail.ru",
+          "time" : {
+            "start" : 1754492009799,
+            "stop" : 1754492010031,
+            "duration" : 232
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "email",
+            "value" : "testuser_1754492001750@mail.ru"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Вводим пароль",
+          "time" : {
+            "start" : 1754492010031,
+            "stop" : 1754492010147,
+            "duration" : 116
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "password",
+            "value" : "123456"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Нажимаем кнопку 'Войти'",
+          "time" : {
+            "start" : 1754492010148,
+            "stop" : 1754492010232,
+            "duration" : 84
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "testuser_1754492001750@mail.ru"
+        }, {
+          "name" : "password",
+          "value" : "123456"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 3,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 4,
+      "hasContent" : true
+    }, {
+      "name" : "Кликаем по кнопке 'Личный кабинет'",
+      "time" : {
+        "start" : 1754492010490,
+        "stop" : 1754492010580,
+        "duration" : 90
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Переходим в 'Конструктор' из личного кабинета",
+      "time" : {
+        "start" : 1754492010580,
+        "stop" : 1754492010711,
+        "duration" : 131
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Переходим в 'Конструктор'",
+        "time" : {
+          "start" : 1754492010581,
+          "stop" : 1754492010711,
+          "duration" : 130
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "Проверяем, что отображается 'Конструктор'",
+      "time" : {
+        "start" : 1754492010711,
+        "stop" : 1754492010753,
+        "duration" : 42
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Удаляем пользователя по токену",
+      "time" : {
+        "start" : 1754492010753,
+        "stop" : 1754492011250,
+        "duration" : 497
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "accessToken",
+        "value" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTM2YzY0OWVkMjgwMDAxYjY3MTc5NSIsImlhdCI6MTc1NDQ5MjAwNCwiZXhwIjoxNzU0NDkzMjA0fQ.TDsc5S1u4saPcxwZBeZC6L8Ho3bvH_D2kfMijuuXMcc"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 11,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.ProfileTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testNavigateFromProfileToConstructor"
+  }, {
+    "name" : "suite",
+    "value" : "tests.ProfileTest"
+  }, {
+    "name" : "host",
+    "value" : "Mbp-apshenichikova.local"
+  }, {
+    "name" : "thread",
+    "value" : "4069@Mbp-apshenichikova.local.main(3)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f2aadb76189fd51.json",
+  "parameterValues" : [ ]
+}

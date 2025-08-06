@@ -1,0 +1,366 @@
+{
+  "uid" : "e93654fae9aea3d",
+  "name" : "testSuccessfulRegistration",
+  "fullName" : "tests.RegistrationTest.testSuccessfulRegistration",
+  "historyId" : "92a4de25b160021a12d2a236c50642b3",
+  "time" : {
+    "start" : 1754492017339,
+    "stop" : 1754492020364,
+    "duration" : 3025
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка успешной регистрации через UI",
+      "time" : {
+        "start" : 1754492017711,
+        "stop" : 1754492019432,
+        "duration" : 1721
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Открываем страницу логина с главной",
+        "time" : {
+          "start" : 1754492017712,
+          "stop" : 1754492018015,
+          "duration" : 303
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Переходим на страницу регистрации из страницы логина",
+        "time" : {
+          "start" : 1754492018015,
+          "stop" : 1754492018119,
+          "duration" : 104
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Кликаем на ссылку 'Зарегистрироваться'",
+          "time" : {
+            "start" : 1754492018015,
+            "stop" : 1754492018119,
+            "duration" : 104
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      }, {
+        "name" : "Регистрируем нового пользователя с именем: Тест, email: testuser1754492017340@example.com",
+        "time" : {
+          "start" : 1754492018119,
+          "stop" : 1754492018551,
+          "duration" : 432
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Вводим имя: Тест",
+          "time" : {
+            "start" : 1754492018119,
+            "stop" : 1754492018233,
+            "duration" : 114
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "name",
+            "value" : "Тест"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Вводим email: testuser1754492017340@example.com",
+          "time" : {
+            "start" : 1754492018233,
+            "stop" : 1754492018357,
+            "duration" : 124
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "email",
+            "value" : "testuser1754492017340@example.com"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Вводим пароль",
+          "time" : {
+            "start" : 1754492018358,
+            "stop" : 1754492018459,
+            "duration" : 101
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "password",
+            "value" : "P@ssw0rd123!"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Нажимаем кнопку 'Зарегистрироваться'",
+          "time" : {
+            "start" : 1754492018459,
+            "stop" : 1754492018551,
+            "duration" : 92
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "name",
+          "value" : "Тест"
+        }, {
+          "name" : "email",
+          "value" : "testuser1754492017340@example.com"
+        }, {
+          "name" : "password",
+          "value" : "P@ssw0rd123!"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 4,
+        "hasContent" : true
+      }, {
+        "name" : "Входим пользователем с email: testuser1754492017340@example.com",
+        "time" : {
+          "start" : 1754492018551,
+          "stop" : 1754492019169,
+          "duration" : 618
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Вводим email: testuser1754492017340@example.com",
+          "time" : {
+            "start" : 1754492018552,
+            "stop" : 1754492018993,
+            "duration" : 441
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "email",
+            "value" : "testuser1754492017340@example.com"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Вводим пароль",
+          "time" : {
+            "start" : 1754492018993,
+            "stop" : 1754492019102,
+            "duration" : 109
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "password",
+            "value" : "P@ssw0rd123!"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Нажимаем кнопку 'Войти'",
+          "time" : {
+            "start" : 1754492019103,
+            "stop" : 1754492019169,
+            "duration" : 66
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "testuser1754492017340@example.com"
+        }, {
+          "name" : "password",
+          "value" : "P@ssw0rd123!"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 3,
+        "hasContent" : true
+      }, {
+        "name" : "Проверяем, что кнопка 'Оформить заказ' видна на главной",
+        "time" : {
+          "start" : 1754492019169,
+          "stop" : 1754492019432,
+          "duration" : 263
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 13,
+      "hasContent" : true
+    }, {
+      "name" : "Удаляем пользователя по email и паролю",
+      "time" : {
+        "start" : 1754492019433,
+        "stop" : 1754492020126,
+        "duration" : 693
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Входим в систему с email: testuser1754492017340@example.com",
+        "time" : {
+          "start" : 1754492019433,
+          "stop" : 1754492019617,
+          "duration" : 184
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "testuser1754492017340@example.com"
+        }, {
+          "name" : "password",
+          "value" : "P@ssw0rd123!"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Удаляем пользователя по токену",
+        "time" : {
+          "start" : 1754492019617,
+          "stop" : 1754492020126,
+          "duration" : 509
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "accessToken",
+          "value" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTM2YzcyOWVkMjgwMDAxYjY3MTdhMiIsImlhdCI6MTc1NDQ5MjAxOSwiZXhwIjoxNzU0NDkzMjE5fQ.CyRyOW2lq1dRBH1CaTCQWqQrWG-RKaP-kupr12Y3Pqw"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "testuser1754492017340@example.com"
+      }, {
+        "name" : "password",
+        "value" : "P@ssw0rd123!"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 17,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.RegistrationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testSuccessfulRegistration"
+  }, {
+    "name" : "suite",
+    "value" : "tests.RegistrationTest"
+  }, {
+    "name" : "host",
+    "value" : "Mbp-apshenichikova.local"
+  }, {
+    "name" : "thread",
+    "value" : "4069@Mbp-apshenichikova.local.main(3)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e93654fae9aea3d.json",
+  "parameterValues" : [ ]
+}

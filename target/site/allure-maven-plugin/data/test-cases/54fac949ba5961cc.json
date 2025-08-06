@@ -1,0 +1,213 @@
+{
+  "uid" : "54fac949ba5961cc",
+  "name" : "loginViaLoginButtonOnMainPage",
+  "fullName" : "tests.LoginTest.loginViaLoginButtonOnMainPage",
+  "historyId" : "2a336f5d4c73abec0c3a1365ae54c976",
+  "time" : {
+    "start" : 1754492032497,
+    "stop" : 1754492036611,
+    "duration" : 4114
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Регистрируем пользователя с email: testuser_1754492032498@mail.ru",
+      "time" : {
+        "start" : 1754492032498,
+        "stop" : 1754492032657,
+        "duration" : 159
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "testuser_1754492032498@mail.ru"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Открываем форму входа с главной страницы и логинимся как пользователь 'testuser_1754492032498@mail.ru'",
+      "time" : {
+        "start" : 1754492035072,
+        "stop" : 1754492035897,
+        "duration" : 825
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Логинимся как пользователь: testuser_1754492032498@mail.ru",
+        "time" : {
+          "start" : 1754492035214,
+          "stop" : 1754492035594,
+          "duration" : 380
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Вводим email: testuser_1754492032498@mail.ru",
+          "time" : {
+            "start" : 1754492035214,
+            "stop" : 1754492035430,
+            "duration" : 216
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "email",
+            "value" : "testuser_1754492032498@mail.ru"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Вводим пароль",
+          "time" : {
+            "start" : 1754492035430,
+            "stop" : 1754492035525,
+            "duration" : 95
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "password",
+            "value" : "123456"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        }, {
+          "name" : "Нажимаем кнопку 'Войти'",
+          "time" : {
+            "start" : 1754492035525,
+            "stop" : 1754492035594,
+            "duration" : 69
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "email",
+          "value" : "testuser_1754492032498@mail.ru"
+        }, {
+          "name" : "password",
+          "value" : "123456"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 3,
+        "hasContent" : true
+      }, {
+        "name" : "Проверяем, что после логина открылся конструктор бургера",
+        "time" : {
+          "start" : 1754492035594,
+          "stop" : 1754492035897,
+          "duration" : 303
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "testuser_1754492032498@mail.ru"
+      }, {
+        "name" : "password",
+        "value" : "123456"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 5,
+      "hasContent" : true
+    }, {
+      "name" : "Удаляем пользователя по токену",
+      "time" : {
+        "start" : 1754492036054,
+        "stop" : 1754492036611,
+        "duration" : 557
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "accessToken",
+        "value" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTM2YzgwOWVkMjgwMDAxYjY3MTdhYyIsImlhdCI6MTc1NDQ5MjAzMiwiZXhwIjoxNzU0NDkzMjMyfQ.pgSmoPeQ88w2VCp-4NAQ5SrqqnwQoxXt4Fc9XSA2mMI"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 8,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "loginViaLoginButtonOnMainPage"
+  }, {
+    "name" : "suite",
+    "value" : "tests.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "Mbp-apshenichikova.local"
+  }, {
+    "name" : "thread",
+    "value" : "4069@Mbp-apshenichikova.local.main(3)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "54fac949ba5961cc.json",
+  "parameterValues" : [ ]
+}

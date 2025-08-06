@@ -1,0 +1,102 @@
+{
+  "uid" : "73be551434ec9559",
+  "name" : "testFillingsTabIsActive",
+  "fullName" : "tests.MainNavigationTest.testFillingsTabIsActive",
+  "historyId" : "d1faec63bf6f9ffe843db57950fe37f2",
+  "time" : {
+    "start" : 1754492046293,
+    "stop" : 1754492050183,
+    "duration" : 3890
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Кликаем на вкладку с текстом: Начинки",
+      "time" : {
+        "start" : 1754492049107,
+        "stop" : 1754492049338,
+        "duration" : 231
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "tabName",
+        "value" : "Начинки"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Проверяем, что активная вкладка отображает текст: Начинки",
+      "time" : {
+        "start" : 1754492049338,
+        "stop" : 1754492050023,
+        "duration" : 685
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expectedText",
+        "value" : "Начинки"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 2,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.MainNavigationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testFillingsTabIsActive"
+  }, {
+    "name" : "suite",
+    "value" : "tests.MainNavigationTest"
+  }, {
+    "name" : "host",
+    "value" : "Mbp-apshenichikova.local"
+  }, {
+    "name" : "thread",
+    "value" : "4069@Mbp-apshenichikova.local.main(3)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "73be551434ec9559.json",
+  "parameterValues" : [ ]
+}
