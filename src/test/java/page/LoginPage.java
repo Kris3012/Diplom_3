@@ -26,7 +26,7 @@ public class LoginPage {
         return this;
     }
 
-    @Step("Вводим пароль")
+    @Step("Вводим пароль (значение скрыто)")
     public LoginPage enterPassword(String password) {
         passwordField.shouldBe(visible).setValue(password);
         return this;
@@ -43,18 +43,19 @@ public class LoginPage {
         return this;
     }
 
-    @Step("Кликаем на ссылку 'Зарегистрироваться'")
+    @Step("Переходим по ссылке 'Зарегистрироваться'")
     public RegisterPage clickRegisterLink() {
         registerLink.shouldBe(visible).click();
         return new RegisterPage();
     }
 
-    @Step("Кликаем на ссылку 'Восстановить пароль'")
+    @Step("Переходим по ссылке 'Восстановить пароль'")
     public ResetPasswordPage clickForgotPasswordLink() {
         forgotPasswordLink.shouldBe(visible).click();
         return new ResetPasswordPage();
     }
 
+    @Step("Проверяем, что форма входа отображается")
     public boolean isLoginFormVisible() {
         return loginButton.shouldBe(visible).exists();
     }

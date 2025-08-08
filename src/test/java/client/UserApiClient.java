@@ -35,10 +35,14 @@ public class UserApiClient {
 
     @Step("Входим в систему с email: {email}")
     public String login(String email, String password) {
+        Map<String, String> authBody = new HashMap<>();
+        authBody.put("email", email);
+        authBody.put("password", password);
+
         Response response = given()
                 .baseUri(BASE_URL)
-                .header("Content-Type", "application/json")
-                .body("{\"email\":\"" + email + "\", \"password\":\"" + password + "\"}")
+                .contentType(ContentType.JSON)
+                .body(authBody)
                 .when()
                 .post("/auth/login");
 

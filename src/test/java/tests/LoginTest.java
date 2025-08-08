@@ -1,8 +1,6 @@
 package tests;
 
 import client.UserApiClient;
-import com.codeborne.selenide.Condition;
-import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -58,7 +56,6 @@ public class LoginTest extends BaseTest {
         openLoginFromResetPasswordPageAndLogin(testEmail, testPassword);
     }
 
-    @Step("Открываем форму входа с главной страницы и логинимся как пользователь '{email}'")
     private void openLoginFromMainPageAndLogin(String email, String password) {
         MainPage mainPage = new MainPage();
         mainPage.clickLoginButton();
@@ -69,7 +66,6 @@ public class LoginTest extends BaseTest {
         verifyLoginSuccessful();
     }
 
-    @Step("Открываем форму входа через кнопку 'Личный кабинет' и логинимся как пользователь '{email}'")
     private void openLoginFromPersonalAccountAndLogin(String email, String password) {
         MainPage mainPage = new MainPage();
         mainPage.clickPersonalAccountButton();
@@ -80,7 +76,6 @@ public class LoginTest extends BaseTest {
         verifyLoginSuccessful();
     }
 
-    @Step("Переходим из страницы регистрации к форме входа и логинимся как пользователь '{email}'")
     private void openLoginFromRegisterPageAndLogin(String email, String password) {
         MainPage mainPage = new MainPage();
         mainPage.clickLoginButton();
@@ -97,7 +92,6 @@ public class LoginTest extends BaseTest {
         verifyLoginSuccessful();
     }
 
-    @Step("Переходим из страницы восстановления пароля к форме входа и логинимся как пользователь '{email}'")
     private void openLoginFromResetPasswordPageAndLogin(String email, String password) {
         MainPage mainPage = new MainPage();
         mainPage.clickLoginButton();
@@ -114,9 +108,8 @@ public class LoginTest extends BaseTest {
         verifyLoginSuccessful();
     }
 
-    @Step("Проверяем, что после логина открылся конструктор бургера")
     private void verifyLoginSuccessful() {
-        $x("//h1[text()='Соберите бургер']").shouldBe(Condition.visible);
-        assertTrue("Проверка успешного входа: отображается конструктор", new MainPage().isConstructorVisible());
+        assertTrue("Должен отображаться конструктор после входа", new MainPage().isConstructorVisible());
     }
 }
+

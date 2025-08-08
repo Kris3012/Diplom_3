@@ -1,13 +1,12 @@
 package tests;
 
 import client.UserApiClient;
-import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import page.LoginPage;
 import page.MainPage;
 import page.ProfilePage;
-import page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.Assert.assertTrue;
@@ -44,77 +43,40 @@ public class ProfileTest {
 
     @Test
     public void testNavigateToProfile() {
-        openMainPageAndLogin();
-        clickPersonalAccountButton();
-        checkInProfile();
+        open(baseUrl);
+        mainPage.clickLoginButton();
+        loginPage.loginAs(testEmail, testPassword);
+        mainPage.clickPersonalAccountButton();
+        assertTrue(profilePage.isInProfile());
     }
 
     @Test
     public void testLogoutFromProfile() {
-        openMainPageAndLogin();
-        clickPersonalAccountButton();
-        logoutFromProfile();
-        checkReturnedToLogin();
+        open(baseUrl);
+        mainPage.clickLoginButton();
+        loginPage.loginAs(testEmail, testPassword);
+        mainPage.clickPersonalAccountButton();
+        profilePage.clickLogoutButton();
+        assertTrue(loginPage.isLoginFormVisible());
     }
 
     @Test
     public void testNavigateFromProfileToConstructor() {
-        openMainPageAndLogin();
-        clickPersonalAccountButton();
-        goToConstructorFromProfile();
-        checkConstructorVisible();
+        open(baseUrl);
+        mainPage.clickLoginButton();
+        loginPage.loginAs(testEmail, testPassword);
+        mainPage.clickPersonalAccountButton();
+        profilePage.clickConstructorButton();
+        assertTrue(mainPage.isConstructorVisible());
     }
 
     @Test
     public void testNavigateFromProfileViaLogo() {
-        openMainPageAndLogin();
-        clickPersonalAccountButton();
-        clickLogoInProfile();
-        checkConstructorVisible();
-    }
-
-    // ---------- ШАГИ ----------
-
-    @Step("Открываем главную страницу и логинимся под пользователем: {email}")
-    private void openMainPageAndLogin() {
         open(baseUrl);
         mainPage.clickLoginButton();
         loginPage.loginAs(testEmail, testPassword);
-        mainPage.getConstructorHeader().shouldBe(com.codeborne.selenide.Condition.visible);
-    }
-
-    @Step("Кликаем по кнопке 'Личный кабинет'")
-    private void clickPersonalAccountButton() {
         mainPage.clickPersonalAccountButton();
-    }
-
-    @Step("Проверяем, что мы находимся в личном кабинете")
-    private void checkInProfile() {
-        assertTrue("Ожидалось, что мы в профиле", profilePage.isInProfile());
-    }
-
-    @Step("Выходим из личного кабинета")
-    private void logoutFromProfile() {
-        profilePage.clickLogoutButton();
-    }
-
-    @Step("Проверяем, что отображается форма логина")
-    private void checkReturnedToLogin() {
-        assertTrue("Ожидалась форма входа", loginPage.isLoginFormVisible());
-    }
-
-    @Step("Переходим в 'Конструктор' из личного кабинета")
-    private void goToConstructorFromProfile() {
-        profilePage.clickConstructorButton();
-    }
-
-    @Step("Кликаем по логотипу Stellar Burgers из личного кабинета")
-    private void clickLogoInProfile() {
         profilePage.clickStellarBurgersLogo();
-    }
-
-    @Step("Проверяем, что отображается 'Конструктор'")
-    private void checkConstructorVisible() {
-        assertTrue("Ожидался видимый конструктор", mainPage.isConstructorVisible());
+        assertTrue(mainPage.isConstructorVisible());
     }
 }

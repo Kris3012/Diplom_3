@@ -2,6 +2,7 @@ package page;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
@@ -20,59 +21,64 @@ public class MainPage {
     private final SelenideElement orderButton = $x("//button[text()='Оформить заказ']");
     private final ElementsCollection tabs = $$("div.tab_tab__1SPyG");
 
-    public void clickLoginButton() {
+    @Step("Кликаем кнопку 'Войти'")
+    public LoginPage clickLoginButton() {
         loginButton.shouldBe(visible).click();
         $x("//button[text()='Войти']").shouldBe(visible, Duration.ofSeconds(5));
+        return new LoginPage();
     }
 
-    public void clickLogo() {
+    @Step("Кликаем по логотипу Stellar Burgers")
+    public MainPage clickLogo() {
         logoButton.shouldBe(visible).click();
+        return this;
     }
 
-    public void clickConstructorButton() {
+    @Step("Кликаем кнопку 'Конструктор'")
+    public MainPage clickConstructorButton() {
         constructorButton.shouldHave(text("Конструктор")).shouldBe(visible).click();
+        return this;
     }
 
-    public void clickPersonalAccountButton() {
+    @Step("Кликаем кнопку 'Личный кабинет'")
+    public MainPage clickPersonalAccountButton() {
         personalAccountButton.shouldBe(visible).click();
+        return this;
     }
 
-    public void clickBunSection() {
-        SelenideElement el = tabs.findBy(text("Булки")).shouldBe(visible);
-        new Actions(getWebDriver()).moveToElement(el).click().perform();
+    @Step("Кликаем по вкладке '{tabName}' с JS кликом и прокруткой")
+    public MainPage clickTab(String tabName) {
+        SelenideElement tab = tabs.findBy(text(tabName)).shouldBe(visible);
+        tab.scrollTo();
+        tab.shouldBe(visible, enabled);
+
+        executeJavaScript("arguments[0].click();", tab);
+
+        tabs.findBy(cssClass("tab_tab_type_current__2BEPc"))
+                .shouldHave(text(tabName))
+                .shouldBe(visible, Duration.ofSeconds(5));
+
+        return this;
     }
 
-    public void clickSauceSection() {
-        SelenideElement el = tabs.findBy(text("Соусы")).shouldBe(visible);
-        new Actions(getWebDriver()).moveToElement(el).click().perform();
+    @Step("Получаем текст активной вкладки")
+    public String getCurrentTabText() {
+        return tabs.findBy(cssClass("tab_tab_type_current__2BEPc")).shouldBe(visible).getText();
     }
 
-    public void clickFillingSection() {
-        SelenideElement el = tabs.findBy(text("Начинки")).shouldBe(visible);
-        new Actions(getWebDriver()).moveToElement(el).click().perform();
-    }
-
-    public SelenideElement getCurrentTab() {
-        return $$("div.tab_tab__1SPyG").findBy(cssClass("tab_tab_type_current__2BEPc"));
-    }
-
+    @Step("Проверяем, что отображается конструктор")
     public boolean isConstructorVisible() {
-        return constructorHeader.shouldBe(visible).getText().contains("Соберите бургер");
+        constructorHeader.shouldBe(visible);
+        return constructorHeader.getText().contains("Соберите бургер");
     }
 
-    public void waitForConstructor() {
-        constructorHeader.shouldHave(text("Соберите бургер")).shouldBe(visible);
-    }
-
+    @Step("Проверяем, что отображается форма логина")
     public boolean isLoginPageVisible() {
         return $("form").shouldBe(visible).exists();
     }
 
+    @Step("Проверяем, что кнопка 'Оформить заказ' видна")
     public boolean isOrderButtonVisible() {
         return orderButton.shouldBe(visible, Duration.ofSeconds(6)).isDisplayed();
-    }
-
-    public SelenideElement getConstructorHeader() {
-        return constructorHeader;
     }
 }
